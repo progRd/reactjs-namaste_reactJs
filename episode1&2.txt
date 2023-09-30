@@ -1,0 +1,27 @@
+emmet - generate code ,command - html:5
+
+cross origin
+
+root.render will replace the other html
+
+parcel is bundler. it is give muscle in our bones. it is beast. 
+to install parcel -> npm i -D(i.e dev depency) parcel
+^- carret(only install minor version) , ~- tilde(can install major version) - > caret is safe for.
+package.json in configuration file of npm.
+Dependency's are there in package.json.
+package-lock.json keeps the record of every exact verion of the depency inside package.json
+intrgrety in package-lock.json is use  to maintain excat version for dev and prod env.
+
+configure npm -> npm i then provide answer some basic questions then it will set up the configuration
+
+transitive depencies - > one depemcy has another depency in node_module. If we install parcel it will install other packages too with the parcel becuase parcel has other depencies.
+
+run npx parcel index.html -- > start the application, It creates the server for us
+
+npm is install the package.
+npx is execute the packge, In this command parcel buid the dev environment to excute the index.html and build one server to run it into the browser
+
+to build production ready application run -> npx parcel build index.html. 
+But it will throw error because our package.json has configure the entry point of App.js. So we hasve to remove the main:App.js.
+
+npx parcel index.html issue fix -> https://github.com/parcel-bundler/parcel/issues/7104#issuecomment-967260755
