@@ -1,0 +1,44 @@
+React is to create the element 
+const react = React.createElement('h1', { id: 'heading' }, 'Hello ReactJs Library!');
+
+ReactDOM is to create the root and convert the object to html and execute in the browser
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
+// JSX is different from React. We can run React code without JSX. JSX makes developers life easy.
+
+JSX(transpiled before it reaches to JS) -- PARCEL is doing that activity.
+Because browser does not understand the JSX, so parcel transform it to an React code .
+Here Babel is doing that activity to convert that.
+
+JSX syntax -> if we use jsx in multiple line then put it into the bracket, ()
+e.g,
+const heading = (<h1>
+Namaste React using JSX
+</h1>)
+
+
+component -> 1. functional component 2. class based component
+
+functional component -> It is a normal javascript function which returns piece of jsx
+
+component composition -> place one component inside another component
+
+we can add functional component inside a function component
+
+Ex: -
+const Title = ()=> (
+  <h1 id="heading" className="head" tabIndex="1">
+    This is Namaste JS
+  </h1>
+);
+
+// create functional component
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+        <Title/>
+      <h1>React functional component</h1>
+    </div>
+  );
+};
