@@ -1,0 +1,5 @@
+props mean it's same as a paassing an argument in a functional
+ex:-- resObj={data}
+
+always add key in reactelement when we are passing it in a loop. React easily identify the element by separating the id value.
+ex: -- key={id}
