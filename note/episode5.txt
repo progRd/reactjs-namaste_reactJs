@@ -1,0 +1,1 @@
+name import -> {} and default import in react.
