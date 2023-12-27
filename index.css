@@ -1,42 +1,54 @@
 #heading {
-    color: red;
+  color: red;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
 }
 .logo {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 .nav-items {
-    align-items: center;
+  align-items: center;
 }
 .nav-items > ul {
-    display: flex;
+  display: flex;
 }
 .nav-items > ul > li {
-    padding: 10px;
-    list-style: none;
+  padding: 10px;
+  list-style: none;
 }
 
 .res-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .res-card {
-    width: 200px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
+  width: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
 }
 .res-image {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 .res-description {
-    padding: 0 5px;
-    word-wrap: break-word;
+  padding: 0 5px;
+  word-wrap: break-word;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  background-color: #f0f0f0;
+  margin: 20px;
 }

@@ -1,1 +1,3 @@
 name import -> {} and default import in react.
+
+hook in react is a normal javascript function
