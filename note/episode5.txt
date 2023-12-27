@@ -1,3 +1,12 @@
 name import -> {} and default import in react.
 
 hook in react is a normal javascript function
+
+reconciliation algorithm(react fiber)
+
+vitul DOM is representation of actual DOM. It will repesent as a object if we do console.log(<HeaderCompoent/>);
+
+Actual DOM is tag(<div>, <img>)
+
+diff algorithm -> it will try to find out diff between old virtual DOm and new virtual DOM. It is fast because it is easier to find out diff 
+between two virtual rathar than REAL DOM. beacuse object is fast than real DOM tag

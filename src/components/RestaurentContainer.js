@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import LoaderComponent from "./LoaderComponent";
 const RestaurentContainer = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
+  const [filterRestaurants, setFilterRestaurants] = useState([]);
+  const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
     featchData();
@@ -19,7 +21,11 @@ const RestaurentContainer = () => {
     );
     getData = await getData.json();
     setListOfRestaurants(
-      getData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+      getData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
+    );
+    setFilterRestaurants(
+      getData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
@@ -31,6 +37,34 @@ const RestaurentContainer = () => {
   return (
     <div className="body">
       <div className="filterList">
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setSearchText(e.target.value);
+            }}
+          />
+          <button
+            onClick={() => {
+              // console.log(listOfRestaurants);
+              const filterRes = listOfRestaurants.filter((ele) => {
+                // console.log(ele.info.name, searchText);
+                return (
+                  ele?.info?.name
+                    ?.toLowerCase()
+                    .indexOf(searchText.toLowerCase()) > -1
+                );
+              });
+              console.log("filterRes", filterRes);
+              setFilterRestaurants(filterRes);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <button
           onClick={() => {
             const filterRes = listOfRestaurants.filter(
@@ -50,7 +84,7 @@ const RestaurentContainer = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((elelment, index) => (
+        {filterRestaurants.map((elelment, index) => (
           <RestaurentCard key={elelment.info.id} resInfo={elelment} />
         ))}
       </div>

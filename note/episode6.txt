@@ -1,4 +1,5 @@
 1. useEffect hook:- 
+It call after render the components
 useEffect(()=> {
     console.log('hi)
 }, [])  -> 1st parameter is callback function and 2nd parameter is dependency
@@ -12,3 +13,7 @@ So we user state varible hook to render the UI with updated value.
 
 3. when usestate hook update any value on click event then it will re render the component with updated value.
 So, 1st time value will update then component will re render with updated value.
+
+4. loads -> render(loader) -> api-> actual UI
+
+5. if we change the value through state variable function react rerender the component.

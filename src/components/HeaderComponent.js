@@ -1,5 +1,5 @@
 import { useState } from "react";
-const HeaderComponent = () => {
+export const HeaderComponent = () => {
   const [btnName, setBtnName] = useState("Login");
   return (
     <header className="header">
